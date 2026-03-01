@@ -1,0 +1,27 @@
+# Claude Terminal Theme
+# Derived from Anthropic's official brand palette
+
+accent: "#D97757"
+background: "#262624"
+foreground: "#FAF9F5"
+
+terminal_colors:
+  normal:
+    black:   "#141413"
+    red:     "#C4614A"
+    green:   "#788C5D"
+    yellow:  "#C49A3C"
+    blue:    "#6A9BCC"
+    magenta: "#9E7BAA"
+    cyan:    "#5C9EA0"
+    white:   "#B0AEA5"
+    
+  bright:
+    black:   "#6B6860"
+    red:     "#E07A5C"
+    green:   "#9AB57A"
+    yellow:  "#D4B05A"
+    blue:    "#8DBDE0"
+    magenta: "#C49EC8"
+    cyan:    "#80BFC1"
+    white:   "#E8E6DC"

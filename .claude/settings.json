@@ -1,0 +1,29 @@
+{
+  "enabledPlugins": {
+    "superpowers@claude-plugins-official": true,
+    "superpowers@superpowers-marketplace": true,
+    "ai-skills@claude-starter-complete": true,
+    "toon-formatter@claude-starter-complete": true,
+    "orchestration@claude-starter-complete": true
+  },
+  "permissions": {
+    "allow": [
+      "Read",
+      "Edit",
+      "Write",
+      "Glob",
+      "Grep",
+      "Bash(git *)",
+      "Bash(shellcheck *)",
+      "Bash(shfmt *)",
+      "Bash(ls *)",
+      "Bash(chmod *)"
+    ],
+    "deny": [
+      "Read(./.raycast/config.json)",
+      "Edit(./.raycast/config.json)",
+      "Read(./**/*.env)",
+      "Edit(./**/*.env)",
+    ]
+  }
+}

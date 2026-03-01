@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CompilerFlags</key>
+	<string></string>
+	<key>CompilerScript</key>
+	<false/>
+	<key>ConsoleType</key>
+	<integer>0</integer>
+	<key>ConsoleTypeSwitchable</key>
+	<true/>
+	<key>Debugger</key>
+	<string>xdebug</string>
+	<key>Diagnostics</key>
+	<array>
+		<dict>
+			<key>Command</key>
+			<string>php -l $filename</string>
+			<key>KeyEquivalent</key>
+			<string></string>
+			<key>Name</key>
+			<string>PHP Syntax</string>
+			<key>Options</key>
+			<integer>4</integer>
+			<key>OutputMode</key>
+			<integer>1</integer>
+			<key>OutputRegex</key>
+			<string>^(?&lt;message&gt;.*?)(?: in (?&lt;file&gt;.*?))? on line (?&lt;line&gt;\d+)$</string>
+			<key>OutputScriptUUID</key>
+			<string></string>
+			<key>Type</key>
+			<integer>1</integer>
+			<key>UpdateMode</key>
+			<integer>3</integer>
+			<key>uuid</key>
+			<string>AEA25FD3-B092-44F7-8577-A540A56FE5C5</string>
+		</dict>
+		<dict>
+			<key>Command</key>
+			<string></string>
+			<key>KeyEquivalent</key>
+			<string></string>
+			<key>Name</key>
+			<string>Console Text</string>
+			<key>OutputMode</key>
+			<integer>1</integer>
+			<key>OutputRegex</key>
+			<string>^(?&lt;message&gt;.*?)(?: in (?&lt;file&gt;.*?))? on line (?&lt;line&gt;\d+)$</string>
+			<key>OutputScriptUUID</key>
+			<string></string>
+			<key>Type</key>
+			<integer>2</integer>
+			<key>UpdateMode</key>
+			<integer>2</integer>
+			<key>uuid</key>
+			<string>916AB227-13CF-429E-8C89-154E417E7821</string>
+		</dict>
+	</array>
+	<key>Docs</key>
+	<array>
+		<dict>
+			<key>Enabled</key>
+			<true/>
+			<key>Name</key>
+			<string>php.net</string>
+			<key>POST</key>
+			<string></string>
+			<key>Scope</key>
+			<string>source.php</string>
+			<key>Type</key>
+			<integer>0</integer>
+			<key>URL</key>
+			<string>http://php.net/manual-lookup.php?pattern={query}</string>
+			<key>uuid</key>
+			<string>69B84E29-B4B4-423E-B816-7E6818E845F3</string>
+		</dict>
+	</array>
+	<key>Enabled</key>
+	<false/>
+	<key>Errors</key>
+	<dict>
+		<key>127</key>
+		<string>Could not find PHP on your system. To install the latest version of PHP using homebrew, run the command "brew install php" in your terminal. If you don't have homebrew installed, you can get it at https://brew.sh/</string>
+	</dict>
+	<key>FileExtensions</key>
+	<array>
+		<string>php</string>
+	</array>
+	<key>Grammar</key>
+	<string>text.html.php</string>
+	<key>LanguageBundleVersion</key>
+	<integer>1</integer>
+	<key>Name</key>
+	<string>PHP</string>
+	<key>OutputEncoding</key>
+	<integer>0</integer>
+	<key>RequiresExternalComponents</key>
+	<true/>
+	<key>RunCommand</key>
+	<string>php $filename</string>
+	<key>SoftTabs</key>
+	<false/>
+	<key>TabWidth</key>
+	<integer>4</integer>
+	<key>Templates</key>
+	<array>
+		<dict>
+			<key>Default</key>
+			<true/>
+			<key>Extension</key>
+			<string>php</string>
+			<key>Name</key>
+			<string>PHP Script</string>
+			<key>NameOnCreation</key>
+			<false/>
+			<key>Template</key>
+			<string>&lt;?php
+	&lt;##&gt;
+?&gt;</string>
+		</dict>
+		<dict>
+			<key>Default</key>
+			<false/>
+			<key>Extension</key>
+			<string>php</string>
+			<key>Name</key>
+			<string>Class</string>
+			<key>NameOnCreation</key>
+			<true/>
+			<key>Template</key>
+			<string>&lt;?php
+	//
+	// ___FILENAME___
+	// Created by ___FULLUSERNAME___ on ___DATE___.
+	class ___FILEBASENAME___ {
+		&lt;##&gt;
+	}
+?&gt;</string>
+		</dict>
+	</array>
+	<key>uuid</key>
+	<string>DC909571-5FC3-4625-90FD-A59B3171788D</string>
+</dict>
+</plist>

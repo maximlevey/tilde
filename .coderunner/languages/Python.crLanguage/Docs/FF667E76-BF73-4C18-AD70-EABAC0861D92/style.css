@@ -1,0 +1,116 @@
+body {
+	margin: 14px !important;
+	text-align: left;
+	zoom: 0.95;
+}
+
+.related,
+.body {
+	padding: 0 !important;
+	margin: 0 !important;
+	min-width: 0 !important;
+	border: 0 !important;
+}
+
+.document {
+	padding: 0 !important;
+}
+
+.footer {
+	margin-top: 20px !important;
+}
+
+.bodywrapper {
+	margin-left: 0 !important;
+}
+
+.related ul {
+	padding: 0 !important;
+}
+
+.sphinxsidebar,
+#search-documentation,
+#search-documentation ~ *:not(#search-results),
+.document ~ .related,
+.inline-search {
+	display: none !important;
+}
+
+div.body p,
+div.body dd,
+div.body li,
+div.body blockquote {
+	-webkit-hyphens: manual !important;
+	text-align: left !important;
+}
+
+#search-results h2:first-child {
+	font-size: 110%;
+	margin: 12px 0px 10px 0px;
+}
+
+#search-results > p {
+	display: none !important;
+}
+
+.version_switcher_placeholder {
+	clear: both;
+}
+
+.highlighted {
+	background-color: transparent !important;
+}
+
+code {
+	font-size: 1em;
+	background: transparent;
+}
+
+div.body h1, div.body h2, div.body h3, div.body h4, div.body h5, div.body h6 {
+	margin: 0;
+	border: 0;
+	padding: 0.3em 0;
+}
+
+.coderunner_style ul.search,
+.coderunner_style h1,
+.coderunner_style h2,
+.coderunner_style h3,
+.coderunner_style h4,
+.coderunner_style h5,
+.coderunner_style h6,
+.coderunner_style div.document,
+.coderunner_style .related {
+	background-color: transparent !important;
+}
+
+.coderunner_style table.docutils {
+	border: none !important;
+}
+
+.coderunner_style_dark dt:target {
+	background: rgba(100, 100, 0, 0.5);
+}
+
+.coderunner_style_dark ul.search li p.context {
+	color: #aaa;
+}
+
+.coderunner_style_light ul.search li p.context {
+	color: #555;
+}
+
+.coderunner_style .related,
+.coderunner_style .related a,
+.coderunner_style .footer,
+.coderunner_style .footer a {
+	color: #444 !important;
+}
+
+.coderunner_docs_64126A88-E29D-4B9D-AB53-13EF3E1D0388 span.pre {
+	font-size: 1.1em;
+}
+
+.coderunner_docs_64126A88-E29D-4B9D-AB53-13EF3E1D0388 code.descname {
+	font-size: 1.2em;
+}

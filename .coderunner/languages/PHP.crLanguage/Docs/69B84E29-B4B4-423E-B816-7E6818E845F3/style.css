@@ -1,0 +1,32 @@
+html.coderunner_style {
+	background-image: none !important;
+}
+
+.page-tools .edit-bug,
+.page-tools label,
+#usernotes .action {
+	display: none;
+}
+
+#layout-content {
+	padding: 12px;
+	border: none !important;
+}
+
+#head-nav.coderunner_inverted,
+#head-nav.coderunner_inverted #mainmenu-toggle-overlay.coderunner_inverted {
+	filter: none !important;
+}
+
+#head-nav.coderunner_inverted input[type="search"] {
+	color: gray !important;
+}
+
+#head-nav.coderunner_inverted .tt-dropdown-menu,
+#head-nav.coderunner_inverted ul.nav {
+	filter: invert(100%) hue-rotate(180deg);
+}
+
+.navbar-search {
+	display: none !important;
+}

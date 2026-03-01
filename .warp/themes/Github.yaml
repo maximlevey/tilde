@@ -1,0 +1,28 @@
+# Github Terminal Theme
+# Derived from GitHub's official brand palette
+
+details: darker
+accent: "#5986C2"
+background: "#22272E"
+foreground: "#FFFFFF"
+
+terminal_colors:
+  normal:
+    black:   "#545D68"
+    red:     "#F47067"
+    green:   "#57AB5A"
+    yellow:  "#C69026"
+    blue:    "#539BF5"
+    magenta: "#B083F0"
+    cyan:    "#39C5CF"
+    white:   "#909DAB"
+    
+  bright:
+    black:   "#636E7B"
+    red:     "#FF938A"
+    green:   "#6BC46D"
+    yellow:  "#DAAA3F"
+    blue:    "#6CB6FF"
+    magenta: "#DCBDFB"
+    cyan:    "#56D4DD"
+    white:   "#CDD9E5"

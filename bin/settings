@@ -1,0 +1,19 @@
+#!/usr/bin/env zsh
+# shellcheck shell=bash
+
+# shellcheck source=../lib/zsh/logging.zsh
+source "${ZSH_LIB}/logging.zsh"
+
+readonly ACTION="$1"
+shift 2>/dev/null
+
+[[ "${ACTION}" == "--read" ]] || [[ "${ACTION}" == "--write" ]] ||
+  usage "settings (--read | --write) <domain> <key> [<type> <value>]"
+
+if [[ "${ACTION}" == "--read" ]]; then
+  [[ "$#" -ge 1 ]] || usage "settings --read <domain> [<key>]"
+  defaults read "$@"
+elif [[ "${ACTION}" == "--write" ]]; then
+  [[ "$#" -ge 4 ]] || usage "settings --write <domain> <key> <type> <value>"
+  defaults write "$@" >/dev/null
+fi

@@ -1,0 +1,33 @@
+domain: dev.warp.Warp-Stable
+
+settings:
+  FontSize:
+    type: string
+    value: "13.0"
+  IsAnyAIEnabled:
+    type: bool
+    value: false
+  LinkTooltip:
+    type: bool
+    value: false
+  RestoreSession:
+    type: bool
+    value: false
+  ShowChangelogAfterUpdate:
+    type: bool
+    value: false
+  ShowWarningBeforeLogOut:
+    type: bool
+    value: false
+  ShowWarningBeforeQuitting:
+    type: bool
+    value: false
+  TelemetryEnabled:
+    type: bool
+    value: false
+  WelcomeTipsCompleted:
+    type: bool
+    value: true
+  Theme:
+    type: string
+    value: '{"Custom":{"name":"Claude","path":"/Users/maximlevey/.warp/themes/Claude.yaml"}}'

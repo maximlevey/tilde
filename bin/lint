@@ -1,0 +1,53 @@
+#!/usr/bin/env zsh
+# shellcheck shell=bash
+#
+# Lint and format source files by language.
+
+# shellcheck source=../lib/zsh/logging.zsh
+source "${ZSH_LIB}/logging.zsh"
+
+readonly LANGUAGE="${1}"
+readonly TARGET="${2:-.}"
+
+[[ "$#" -ge 1 ]] || usage "lint <language> [<path>]"
+
+case "${LANGUAGE}" in
+shell | sh)
+  if ! command -v shfmt &>/dev/null; then
+    log_err "shfmt is not installed"
+    exit 3
+  fi
+  if ! command -v shellcheck &>/dev/null; then
+    log_err "shellcheck is not installed"
+    exit 3
+  fi
+
+  log "Formatting with shfmt..."
+  shfmt -w "${TARGET}"
+
+  log "Linting with shellcheck..."
+  shellcheck "${TARGET}"
+  ;;
+swift | sw)
+  if ! command -v swiftformat &>/dev/null; then
+    log_err "swiftformat is not installed"
+    exit 3
+  fi
+  if ! command -v swiftlint &>/dev/null; then
+    log_err "swiftlint is not installed"
+    exit 3
+  fi
+
+  log "Formatting with swiftformat..."
+  swiftformat "${TARGET}"
+
+  log "Linting with swiftlint..."
+  swiftlint "${TARGET}"
+  ;;
+python | py)
+  log "Python linting is not yet supported"
+  ;;
+*)
+  usage "lint <language> [<path>]"
+  ;;
+esac

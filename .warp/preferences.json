@@ -1,0 +1,29 @@
+{
+  "label": "Warp",
+  "preferences": [
+    {
+      "domain": "dev.warp.Warp-Stable",
+      "defaults": {
+        "AliasExpansionEnabled": { "bool": true },
+        "ApplePressAndHoldEnabled": { "bool": false },
+        "CrashReportingEnabled": { "bool": false },
+        "FontSize": { "string": "13.0" },
+        "IsAnyAIEnabled": { "bool": false },
+        "LinkTooltip": { "bool": false },
+        "NewWindowsNumColumns": { "int": 50 },
+        "NewWindowsNumRows": { "int": 25 },
+        "NotebookFontSize": { "string": "14.0" },
+        "RestoreSession": { "bool": false },
+        "SafeModeEnabled": { "bool": true },
+        "Shortcuts": { "bool": false },
+        "ShowChangelogAfterUpdate": { "bool": false },
+        "ShowWarningBeforeLogOut": { "bool": false },
+        "ShowWarningBeforeQuitting": { "bool": false },
+        "TelemetryEnabled": { "bool": false },
+        "Theme": { "string": "{\"Custom\":{\"name\":\"Claude\",\"path\":\"~/.warp/themes/Claude.yaml\"}}" },
+        "UndoCloseEnabled": { "bool": false },
+        "WelcomeTipsCompleted": { "bool": true }
+      }
+    }
+  ]
+}

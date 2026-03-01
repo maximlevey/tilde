@@ -1,0 +1,44 @@
+#!/usr/bin/env zsh
+# shellcheck shell=bash
+#
+# Compile an AppleScript file into a signed macOS .app bundle.
+
+# shellcheck source=../lib/zsh/logging.zsh
+source "${ZSH_LIB}/logging.zsh"
+
+readonly INPUT_PATH="$1"
+readonly BUNDLE_NAME="$2"
+readonly OUTPUT_PATH="${3:-../${BUNDLE_NAME}.app}"
+readonly PLIST_PATH="${OUTPUT_PATH}/Contents/Info.plist"
+
+[[ "$#" -ge 2 ]] || usage "osabuild <script_path> <bundle_name> [<output_path>]"
+
+/bin/rm -rf "${OUTPUT_PATH}" >/dev/null
+
+if ! /usr/bin/osacompile -o "${OUTPUT_PATH}" "${INPUT_PATH}"; then
+  log_err "Bundle creation failed"
+  exit 3
+fi
+
+typeset -A properties
+properties=(
+  CFBundleName "$BUNDLE_NAME"
+  CFBundleDisplayName "$BUNDLE_NAME"
+  CFBundleIdentifier "com.maximlevey.${BUNDLE_NAME}"
+)
+
+# zsh associative array iteration; not parseable by shellcheck
+# shellcheck disable=SC1073,SC1058,SC1072
+for key value in ${(kv)properties}; do
+  /usr/libexec/PlistBuddy -c "Set :${key} ${value}" "${PLIST_PATH}" 2>/dev/null || \
+      /usr/libexec/PlistBuddy -c "Add :${key} string ${value}" "${PLIST_PATH}"
+done
+
+readonly app_type="$(/usr/libexec/PlistBuddy -c "Print CFBundleExecutable" "${PLIST_PATH}")"
+readonly icon_path="$(find "$(dirname "${INPUT_PATH}")" -name "*.icns" -print -quit)"
+
+[[ -z "${icon_path}" ]] \
+  || /bin/cp -rf "${icon_path}" "${OUTPUT_PATH}/Contents/Resources/${app_type}.icns" >/dev/null
+
+chmod +x "${OUTPUT_PATH}/Contents/MacOS/${app_type}" >/dev/null
+/usr/bin/codesign --force --sign - --timestamp=none "${OUTPUT_PATH}" >/dev/null

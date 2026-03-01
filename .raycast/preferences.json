@@ -1,0 +1,24 @@
+{
+  "label": "Raycast",
+  "preferences": [
+    {
+      "domain": "com.raycast.macos",
+      "defaults": {
+        "aiChatHotkeyDismissed": { "bool": true },
+        "onboardingSkipped": { "bool": true },
+        "NSStatusItem Visible raycastIcon": { "bool": false },
+        "keepWindowVisibleOnResignKey": { "bool": false },
+        "navigationCommandStyleIdentifierKey": { "string": "macos" },
+        "faviconProvider": { "string": "apple" },
+        "popToRootTimeout": { "int": 90 },
+        "raycastGlobalHotkey": { "string": "Command-49" },
+        "raycastPreferredWindowMode": { "string": "compact" },
+        "raycastShouldFollowSystemAppearance": { "bool": true },
+        "raycastUI_preferredTextSize": { "string": "large" },
+        "raycastWindowPresentationMode": { "int": 2 },
+        "showFavoritesInCompactMode": { "bool": true },
+        "showGettingStartedLink": { "bool": false }
+      }
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+# Homebrew packages
+brew 'curl'
+brew 'gh'
+brew 'jq'
+brew 'shfmt'
+brew 'shellcheck'
+brew 'swiftformat'
+brew 'swiftlint'
+brew 'xcodes'
+brew 'yq'
+
+# Homebrew casks
+cask 'affinity'
+cask 'claude'
+cask 'cursor'
+cask 'font-hack-nerd-font'
+cask 'raycast'
+cask 'rectangle-pro'
+cask 'setapp'
+cask 'spotify'
+cask 'warp'
+cask 'whatsapp'

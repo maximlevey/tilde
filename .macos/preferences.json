@@ -1,0 +1,156 @@
+{
+  "label": "macOS",
+  "preferences": [
+    {
+      "domain": "NSGlobalDomain",
+      "defaults": {
+        "AppleInterfaceStyleSwitchesAutomatically": { "bool": true },
+        "AppleAquaColorVariant": { "int": 1 },
+        "AppleHighlightColor": { "string": "0.847059 0.847059 0.862745 Graphite" },
+        "AppleShowAllExtensions": { "bool": true },
+        "KeyRepeat": { "int": 2 },
+        "InitialKeyRepeat": { "int": 15 },
+        "NSNavPanelExpandedStateForSaveMode": { "bool": true },
+        "NSNavPanelExpandedStateForSaveMode2": { "bool": true },
+        "PMPrintingExpandedStateForPrint": { "bool": true },
+        "PMPrintingExpandedStateForPrint2": { "bool": true },
+        "com.apple.mouse.tapBehavior": { "int": 1 }
+      },
+      "currentHostDefaults": {
+        "com.apple.mouse.tapBehavior": { "int": 1 }
+      }
+    },
+    {
+      "domain": "com.apple.driver.AppleBluetoothMultitouch.trackpad",
+      "defaults": {
+        "Clicking": { "bool": true }
+      }
+    },
+    {
+      "domain": "com.apple.AppleMultitouchTrackpad",
+      "defaults": {
+        "Clicking": { "bool": true }
+      }
+    },
+    {
+      "domain": "com.apple.finder",
+      "defaults": {
+        "AppleShowAllFiles": { "bool": true },
+        "ShowPathbar": { "bool": true },
+        "ShowStatusBar": { "bool": true },
+        "FXPreferredViewStyle": { "string": "Nlsv" },
+        "FXPreferredSearchViewStyle": { "string": "Nlsv" },
+        "FXEnableExtensionChangeWarning": { "bool": false },
+        "_FXShowPosixPathInTitle": { "bool": true },
+        "ShowExternalHardDrivesOnDesktop": { "bool": false },
+        "ShowRemovableMediaOnDesktop": { "bool": false }
+      }
+    },
+    {
+      "domain": "com.apple.dock",
+      "defaults": {
+        "autohide": { "bool": true },
+        "autohide-delay": { "float": 1000 },
+        "autohide-time-modifier": { "float": 0 },
+        "tilesize": { "int": 16 },
+        "mineffect": { "string": "scale" },
+        "show-recents": { "bool": false }
+      }
+    },
+    {
+      "domain": "com.apple.WindowManager",
+      "defaults": {
+        "EnableStandardClickToShowDesktop": { "bool": false },
+        "EnableTilingByEdgeDrag": { "bool": false },
+        "EnableTilingOptionAccelerator": { "bool": false },
+        "EnableTopTilingByEdgeDrag": { "bool": false },
+        "HideDesktop": { "bool": true },
+        "StandardHideDesktopIcons": { "bool": true },
+        "StandardHideWidgets": { "bool": true },
+        "AppWindowGroupingBehavior": { "int": 1 },
+        "AutoHide": { "bool": true },
+        "StageManagerHideWidgets": { "bool": true }
+      }
+    },
+    {
+      "domain": "com.apple.menuextra.clock",
+      "defaults": {
+        "ShowDate": { "int": 1 },
+        "ShowDayOfWeek": { "bool": false },
+        "IsAnalog": { "bool": false },
+        "FlashDateSeparators": { "bool": false }
+      }
+    },
+    {
+      "domain": "com.apple.screencapture",
+      "defaults": {
+        "location": { "string": "~/Desktop" },
+        "type": { "string": "png" },
+        "disable-shadow": { "bool": true }
+      }
+    },
+    {
+      "domain": "com.apple.desktopservices",
+      "defaults": {
+        "DSDontWriteNetworkStores": { "bool": true },
+        "DSDontWriteUSBStores": { "bool": true }
+      }
+    },
+    {
+      "domain": "com.apple.DiskUtility",
+      "defaults": {
+        "SidebarShowAllDevices": { "bool": true }
+      }
+    },
+    {
+      "domain": "com.apple.controlcenter",
+      "defaults": {
+        "NSStatusItem Visible Battery": { "bool": false },
+        "NSStatusItem Visible WiFi": { "bool": false }
+      }
+    },
+    {
+      "domain": "com.apple.Siri",
+      "defaults": {
+        "StatusMenuVisible": { "bool": false },
+        "VoiceTriggerUserEnabled": { "bool": false }
+      }
+    },
+    {
+      "domain": "com.apple.voicetrigger",
+      "defaults": {
+        "VoiceTrigger Enabled": { "bool": false }
+      }
+    },
+    {
+      "domain": "com.apple.Passwords",
+      "defaults": {
+        "showMenuBarExtra": { "bool": false }
+      }
+    },
+    {
+      "domain": "com.apple.onetimepasscodes",
+      "defaults": {
+        "DeleteVerificationCodes": { "bool": true }
+      }
+    },
+    {
+      "domain": "com.apple.ncprefs",
+      "defaults": {
+        "summarize_previews": { "bool": true }
+      }
+    },
+    {
+      "domain": "com.apple.sharingd",
+      "defaults": {
+        "DiscoverableMode": { "string": "Everyone" }
+      }
+    },
+    {
+      "domain": "org.cups.PrintingPrefs",
+      "defaults": {
+        "UseLastPrinter": { "bool": true }
+      }
+    }
+  ]
+}

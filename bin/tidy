@@ -1,0 +1,23 @@
+#!/usr/bin/env zsh
+# shellcheck shell=bash
+#
+# Organize ~/Downloads into date-based subdirectories.
+
+# shellcheck source=../lib/zsh/logging.zsh
+source "${ZSH_LIB}/logging.zsh"
+
+readonly TARGET="${HOME}/Downloads"
+
+for file in "${TARGET}"/*; do
+  [[ "$(basename "${file}")" =~ ^\.[0-9]{4}-[0-9]{2}-[0-9]{2}$ ]] && continue
+
+  dest_dir="${TARGET}/.$(date -r "$(stat -f "%B" "${file}")" +"%Y-%m-%d")"
+
+  if ! mkdir -p "${dest_dir}" >/dev/null; then
+    log_err "Failed to create ${dest_dir}"
+    continue
+  fi
+
+  mv "${file}" "${dest_dir}/$(basename "${file}")" >/dev/null ||
+    log_err "Failed to move ${file} to ${dest_dir}"
+done

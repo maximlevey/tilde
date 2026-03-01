@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CompilerFlags</key>
+	<string></string>
+	<key>CompilerScript</key>
+	<false/>
+	<key>ConsoleType</key>
+	<integer>2</integer>
+	<key>Diagnostics</key>
+	<array>
+		<dict>
+			<key>Command</key>
+			<string>node --check $filename</string>
+			<key>KeyEquivalent</key>
+			<string></string>
+			<key>Name</key>
+			<string>JS Syntax</string>
+			<key>OutputMode</key>
+			<integer>0</integer>
+			<key>OutputRegex</key>
+			<string></string>
+			<key>OutputScriptUUID</key>
+			<string></string>
+			<key>Type</key>
+			<integer>1</integer>
+			<key>UpdateMode</key>
+			<integer>3</integer>
+			<key>uuid</key>
+			<string>F0F85A7A-29E2-4AA4-9D6C-29CBF25831BD</string>
+		</dict>
+	</array>
+	<key>Docs</key>
+	<array>
+		<dict>
+			<key>Enabled</key>
+			<true/>
+			<key>Name</key>
+			<string>Mozilla MDN</string>
+			<key>POST</key>
+			<string></string>
+			<key>Type</key>
+			<integer>0</integer>
+			<key>URL</key>
+			<string>https://developer.mozilla.org/en-US/search?topic=api&amp;topic=js&amp;q={query}</string>
+			<key>uuid</key>
+			<string>F3DDEE22-F23A-475E-9E9C-BB86BEA52749</string>
+		</dict>
+	</array>
+	<key>Enabled</key>
+	<true/>
+	<key>FileExtensions</key>
+	<array>
+		<string>js</string>
+	</array>
+	<key>Grammar</key>
+	<string>source.js</string>
+	<key>LanguageBundleVersion</key>
+	<integer>1</integer>
+	<key>LiveConsole</key>
+	<false/>
+	<key>Name</key>
+	<string>JavaScript</string>
+	<key>OutputEncoding</key>
+	<integer>0</integer>
+	<key>RunCommand</key>
+	<string>echo "&lt;script src=\"file://$PWD/$filename\"&gt;&lt;/script&gt;"</string>
+	<key>SoftTabs</key>
+	<false/>
+	<key>TabWidth</key>
+	<integer>4</integer>
+	<key>Templates</key>
+	<array/>
+	<key>uuid</key>
+	<string>BDBEA569-54FA-4E18-9E33-35F90DDECE1A</string>
+</dict>
+</plist>

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+    <dict>
+        <key>Label</key>
+        <string>dev.maximlevey.Update</string>
+
+        <key>ServiceDescription</key>
+        <string>Update and upgrade Homebrew packages</string>
+
+        <key>ProgramArguments</key>
+        <array>
+            <string>/bin/zsh</string>
+            <string>/Users/maximlevey/.launchd/update/update.sh</string>
+        </array>
+
+        <key>WorkingDirectory</key>
+        <string>/Users/maximlevey</string>
+
+        <key>StandardErrorPath</key>
+        <string>/Users/maximlevey/.launchd/update/update.log</string>
+
+        <key>EnvironmentVariables</key>
+        <dict>
+            <key>HOME</key>
+            <string>/Users/maximlevey</string>
+            <key>ZSH_LIB</key>
+            <string>/Users/maximlevey/lib/zsh</string>
+            <key>PATH</key>
+            <string>/opt/homebrew/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin</string>
+        </dict>
+
+        <key>StartCalendarInterval</key>
+        <dict>
+            <key>Hour</key>
+            <integer>6</integer>
+            <key>Minute</key>
+            <integer>0</integer>
+        </dict>
+
+        <key>RunAtLoad</key>
+        <false />
+    </dict>
+</plist>

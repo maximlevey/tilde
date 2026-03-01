@@ -1,0 +1,8 @@
+---
+"terminal:ask_ai_assistant_last_block": none
+"ai_assistant_panel:reset_context": none
+"input:open_completion_suggestions": ctrl-space
+"workspace:toggle_ai_assistant": none
+"terminal:ask_ai_assistant": none
+"editor_view:insert_autosuggestion": tab
+"input:toggle_natural_language_command_search": none

@@ -1,0 +1,43 @@
+#######################################
+# System
+#######################################
+
+# macOS
+.AppleDB
+.AppleDesktop
+.AppleDouble
+.DS_Store
+.LSOverride
+
+#######################################
+# Development
+#######################################
+
+# Claude
+.claude/*
+!.claude/plugins/
+!.claude/plugins/**
+
+# Cursor
+.cursorignore
+.cursorindexingignore
+
+# Xcode
+DerivedData/
+xcuserdata/
+
+#######################################
+# Authentication
+#######################################
+
+# SSH
+**/.ssh/id_*
+**/.ssh/*/id_*
+**/.ssh/known_hosts
+
+# Keys
+*.pem
+*.key
+*.p12
+*.crt
+*.csr

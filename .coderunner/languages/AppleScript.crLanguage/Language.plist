@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CompilerFlags</key>
+	<string></string>
+	<key>CompilerScript</key>
+	<false/>
+	<key>ConsoleType</key>
+	<integer>0</integer>
+	<key>Diagnostics</key>
+	<array>
+		<dict>
+			<key>Command</key>
+			<string></string>
+			<key>KeyEquivalent</key>
+			<string></string>
+			<key>Name</key>
+			<string>Console Text</string>
+			<key>OutputMode</key>
+			<integer>1</integer>
+			<key>OutputRegex</key>
+			<string>^(?&lt;file&gt;[^\s].*?):(?&lt;offset&gt;\d+):((?&lt;endOffset&gt;\d+):)? (script error:)?(?&lt;message&gt;.*)$</string>
+			<key>OutputScriptUUID</key>
+			<string></string>
+			<key>Type</key>
+			<integer>2</integer>
+			<key>UpdateMode</key>
+			<integer>2</integer>
+			<key>uuid</key>
+			<string>366098FA-65B8-4F54-849D-D3E98A8EBC8F</string>
+		</dict>
+		<dict>
+			<key>Command</key>
+			<string>osacompile -o /dev/null $filename</string>
+			<key>KeyEquivalent</key>
+			<string></string>
+			<key>Name</key>
+			<string>AppleScript Syntax</string>
+			<key>Options</key>
+			<integer>4</integer>
+			<key>OutputMode</key>
+			<integer>0</integer>
+			<key>OutputRegex</key>
+			<string>^(?&lt;file&gt;[^\s].*?):(?&lt;line&gt;\d+):(?&lt;column&gt;\d+):? (?&lt;message&gt;.*)$</string>
+			<key>OutputScriptUUID</key>
+			<string></string>
+			<key>Type</key>
+			<integer>1</integer>
+			<key>UpdateMode</key>
+			<integer>3</integer>
+			<key>uuid</key>
+			<string>A859D38D-B11C-4E74-880D-E319274D85ED</string>
+		</dict>
+	</array>
+	<key>DiagnosticsDontUseBuiltins</key>
+	<false/>
+	<key>Docs</key>
+	<array/>
+	<key>Enabled</key>
+	<true/>
+	<key>FileExtensions</key>
+	<array>
+		<string>applescript</string>
+		<string>scpt</string>
+	</array>
+	<key>Grammar</key>
+	<string>source.applescript</string>
+	<key>LanguageBundleVersion</key>
+	<integer>1</integer>
+	<key>Name</key>
+	<string>AppleScript</string>
+	<key>OutputEncoding</key>
+	<integer>0</integer>
+	<key>RunCommand</key>
+	<string>osascript $filename</string>
+	<key>SoftTabs</key>
+	<false/>
+	<key>TabWidth</key>
+	<integer>4</integer>
+	<key>Templates</key>
+	<array/>
+	<key>uuid</key>
+	<string>AF9F60E4-632E-40AB-93D8-6A414F37DC9B</string>
+</dict>
+</plist>

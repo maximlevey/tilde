@@ -1,0 +1,22 @@
+{
+  "label": "CleanShot X",
+  "preferences": [
+    {
+      "domain": "com.getcleanshot.app-setapp",
+      "defaults": {
+        "analyticsAllowed": { "bool": false },
+        "autoClosePopup": { "bool": true },
+        "captureWithoutDesktopIcons": { "bool": true },
+        "crosshairMode": { "bool": true },
+        "deletePopupAfterDragging": { "bool": true },
+        "exportPath": { "string": "~/Library/Mobile Documents/com~apple~CloudDocs/Screenshots" },
+        "overlayType": { "int": 0 },
+        "playSounds": { "bool": false },
+        "popupAskForDestinationWhenSaving": { "bool": false },
+        "popupAutoCloseInterval": { "int": 5 },
+        "showMenubarIcon": { "bool": false },
+        "transparentWindowBackground": { "bool": false }
+      }
+    }
+  ]
+}

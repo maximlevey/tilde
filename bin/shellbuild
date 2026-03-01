@@ -1,0 +1,53 @@
+#!/usr/bin/env zsh
+# shellcheck shell=bash
+
+# shellcheck source=../lib/zsh/logging.zsh
+source "${ZSH_LIB}/logging.zsh"
+
+readonly INPUT_PATH="$1"
+readonly BUNDLE_NAME="$2"
+readonly OUTPUT_PATH="${3:-../${BUNDLE_NAME}.app}"
+readonly PLIST_PATH="${OUTPUT_PATH}/Contents/Info.plist"
+
+[[ "$#" -ge 2 ]] || usage "shellbuild <script_path> <bundle_name> [<output_path>]"
+
+/bin/rm -rf "${OUTPUT_PATH}" >/dev/null
+
+mkdir -p "${OUTPUT_PATH}/Contents/MacOS" "${OUTPUT_PATH}/Contents/Resources"
+cp "${INPUT_PATH}" "${OUTPUT_PATH}/Contents/MacOS/${BUNDLE_NAME}"
+
+cat <<EOF > "${OUTPUT_PATH}/Contents/Info.plist"
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>CFBundleDevelopmentRegion</key>
+    <string>en</string>
+    <key>CFBundleInfoDictionaryVersion</key>
+    <string>6.0</string>
+    <key>CFBundleIconFile</key>
+    <string>AppIcon</string>
+</dict>
+</plist>
+EOF
+
+typeset -A properties
+properties=(
+  CFBundleName "$BUNDLE_NAME"
+  CFBundleDisplayName "$BUNDLE_NAME"
+  CFBundleExecutable "$BUNDLE_NAME"
+  CFBundleIdentifier "com.maximlevey.${BUNDLE_NAME}"
+)
+
+for key value in ${(kv)properties}; do
+  /usr/libexec/PlistBuddy -c "Set :${key} ${value}" "${PLIST_PATH}" 2>/dev/null || \
+      /usr/libexec/PlistBuddy -c "Add :${key} string ${value}" "${PLIST_PATH}"
+done
+
+readonly icon_path="$(find "$(dirname "${INPUT_PATH}")" -name "*.icns" -print -quit)"
+
+[[ -z "${icon_path}" ]] \
+  || /bin/cp -rf "${icon_path}" "${OUTPUT_PATH}/Contents/Resources/AppIcon.icns" >/dev/null
+
+chmod +x "${OUTPUT_PATH}/Contents/MacOS/${BUNDLE_NAME}" >/dev/null
+/usr/bin/codesign --force --sign - --timestamp=none "${OUTPUT_PATH}" >/dev/null

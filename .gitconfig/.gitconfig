@@ -1,0 +1,22 @@
+[include]
+    path = .gitconfig.local
+
+[core]
+    editor = cursor --wait
+    excludesfile = ~/.gitignore
+    autocrlf = input
+
+[init]
+    defaultBranch = main
+
+[pull]
+    rebase = false
+
+[fetch]
+    prune = true
+
+[rerere]
+    enabled = true
+
+[color]
+    ui = auto

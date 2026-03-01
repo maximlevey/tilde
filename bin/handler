@@ -1,0 +1,21 @@
+#!/usr/bin/env zsh
+# shellcheck shell=bash
+
+# shellcheck source=../lib/zsh/logging.zsh
+source "${ZSH_LIB}/logging.zsh"
+
+readonly BUNDLE_IDENTIFIER="$1"
+readonly CONTENT_TYPE="$2"
+
+[[ "$#" -ge 2 ]] || usage "handler <bundle_id> <content_type>"
+
+swift - <<EOF
+import Foundation
+
+let contentType = "${CONTENT_TYPE}" as CFString
+let bundleIdentifier = "${BUNDLE_IDENTIFIER}" as CFString
+
+if LSSetDefaultRoleHandlerForContentType(contentType, .all, bundleIdentifier) != 0 {
+    print("Failed to set handler for \\(contentType)")
+}
+EOF

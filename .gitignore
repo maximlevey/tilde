@@ -1,0 +1,72 @@
+#######################################
+# Dotfiles
+#######################################
+
+!.*
+!.*/**
+
+!bin/
+!bin/**
+!lib/
+!lib/**
+!src/
+!src/**
+
+!bootstrap.sh
+!clean.sh
+!README.md
+
+!docs/
+!docs/**
+
+#######################################
+# System
+#######################################
+
+# macOS
+.AppleDB
+.AppleDesktop
+.AppleDouble
+.DS_Store
+.LSOverride
+
+# Shell
+.bash_history
+.zsh_history
+.fish_history
+
+#######################################
+# Development
+#######################################
+
+# Claude
+.claude/*
+!.claude/settings.json
+!.claude/blocklist.json
+
+# Cursor
+.cursorignore
+.cursorindexingignore
+
+# Raycast
+.raycast/config.json
+
+# Python
+**/__pycache__
+
+#######################################
+# Secrets
+#######################################
+
+# Environment
+*.env
+*.local
+.config/
+.ssh/
+
+# Services
+.gnupg/
+.aws/
+.azure/
+.gcloud/
+.kube/

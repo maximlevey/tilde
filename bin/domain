@@ -1,0 +1,18 @@
+#!/usr/bin/env zsh
+# shellcheck shell=bash
+#
+# Print the bundle identifier of a macOS application.
+
+# shellcheck source=../lib/zsh/logging.zsh
+source "${ZSH_LIB}/logging.zsh"
+
+readonly APP_NAME="${1}"
+
+[[ "$#" -eq 1 ]] || usage "domain <app_name>"
+
+if ! open -Ra "${APP_NAME}" 2>/dev/null; then
+  log_err "Application ${APP_NAME} is not installed."
+  exit 3
+fi
+
+osascript -e "id of app \"${APP_NAME}\""

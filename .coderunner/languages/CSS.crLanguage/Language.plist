@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CompilerFlags</key>
+	<string></string>
+	<key>CompilerScript</key>
+	<false/>
+	<key>ConsoleType</key>
+	<integer>2</integer>
+	<key>CustomTabMode</key>
+	<false/>
+	<key>Diagnostics</key>
+	<array/>
+	<key>Docs</key>
+	<array>
+		<dict>
+			<key>Enabled</key>
+			<true/>
+			<key>Name</key>
+			<string>Mozilla MDN</string>
+			<key>POST</key>
+			<string></string>
+			<key>Type</key>
+			<integer>0</integer>
+			<key>URL</key>
+			<string>https://developer.mozilla.org/en-US/search?topic=css&amp;q={query}</string>
+			<key>uuid</key>
+			<string>8437F81C-D839-4409-BAD9-55FAC80B8E71</string>
+		</dict>
+		<dict>
+			<key>Enabled</key>
+			<true/>
+			<key>Name</key>
+			<string>CSS Selectors Reference</string>
+			<key>POST</key>
+			<string></string>
+			<key>Type</key>
+			<integer>1</integer>
+			<key>URL</key>
+			<string>https://www.w3.org/TR/selectors-3/#selectors</string>
+			<key>uuid</key>
+			<string>5A2C8DB0-CB23-46DF-84E8-C80B36C9CCB6</string>
+		</dict>
+	</array>
+	<key>Enabled</key>
+	<true/>
+	<key>FileExtensions</key>
+	<array>
+		<string>css</string>
+	</array>
+	<key>Grammar</key>
+	<string>source.css</string>
+	<key>LanguageBundleVersion</key>
+	<integer>1</integer>
+	<key>Name</key>
+	<string>CSS</string>
+	<key>OutputEncoding</key>
+	<integer>0</integer>
+	<key>RunCommand</key>
+	<string>echo "&lt;style&gt;"; cat $filename; echo "&lt;/style&gt;"</string>
+	<key>SoftTabs</key>
+	<false/>
+	<key>TabWidth</key>
+	<integer>4</integer>
+	<key>Templates</key>
+	<array/>
+	<key>uuid</key>
+	<string>B78D595F-94B7-470B-BE66-C3BF31DE4E4F</string>
+</dict>
+</plist>

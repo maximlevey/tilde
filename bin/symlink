@@ -1,0 +1,28 @@
+#!/usr/bin/env zsh
+# shellcheck shell=bash
+#
+# Create or update a symbolic link with backup support.
+
+# shellcheck source=../lib/zsh/logging.zsh
+source "${ZSH_LIB}/logging.zsh"
+
+readonly TARGET="$1"
+readonly DEST="$2"
+
+[[ "$#" -ge 2 ]] || usage "symlink <source> <destination>"
+
+if [[ ! -e "${TARGET}" ]]; then
+  log_err "${TARGET} does not exist"
+  exit 3
+fi
+
+if [[ "${TARGET}" = "$(readlink -f "${DEST}")" ]]; then
+  log "Symbolic link already exists"
+  exit 0
+fi
+
+[[ -L "${DEST}" ]] && rm -rf "${DEST}" >/dev/null
+
+[[ -e "${DEST}" ]] && mv "${DEST}" "${DEST}.bak" >/dev/null
+
+ln -sfn "${TARGET}" "${DEST}" >/dev/null
