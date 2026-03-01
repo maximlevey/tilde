@@ -1,10 +1,11 @@
-[include]
-    path = .gitconfig.local
+[user]
+    name = maximlevey
+    email = 72744507+maximlevey@users.noreply.github.com
 
 [core]
-    editor = cursor --wait
-    excludesfile = ~/.gitignore
     autocrlf = input
+    editor = cursor --wait
+    excludesfile = ~/.gitignore.global
 
 [init]
     defaultBranch = main

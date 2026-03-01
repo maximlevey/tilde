@@ -1,6 +1,7 @@
 # Claude Terminal Theme
 # Derived from Anthropic's official brand palette
 
+details: darker
 accent: "#D97757"
 background: "#262624"
 foreground: "#FAF9F5"

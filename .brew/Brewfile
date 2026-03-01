@@ -5,7 +5,6 @@ brew 'jq'
 brew 'shfmt'
 brew 'shellcheck'
 brew 'swiftformat'
-brew 'swiftlint'
 brew 'xcodes'
 brew 'yq'
 

@@ -1,41 +1,44 @@
 #######################################
-# Dotfiles
+# Whitelist
 #######################################
 
+# Ignore everything, then selectively un-ignore.
 *
 !.*
 !.*/**
 
+# Non-dotfile directories and files.
 !bin/
 !bin/**
 !lib/
 !lib/**
 !src/
 !src/**
-
-!README.md
-
 !docs/
 !docs/**
+!README.md
 
 #######################################
-# System
-#######################################
-
 # macOS
+#######################################
+
 .AppleDB
 .AppleDesktop
 .AppleDouble
+.CFUserTextEncoding
 .DS_Store
 .LSOverride
-
-# Shell
-.shell/
-.zsh_sessions/
-.CFUserTextEncoding
+.Trash/
 
 #######################################
-# Development
+# Shell
+#######################################
+
+.shell/
+.zsh_sessions/
+
+#######################################
+# Tools
 #######################################
 
 # Claude
@@ -50,23 +53,20 @@
 .cursorignore
 .cursorindexingignore
 
-# Raycast
-.raycast/config.json
-
 # Python
 **/__pycache__
+
+# Raycast (runtime config)
+.raycast/config.json
 
 #######################################
 # Secrets
 #######################################
 
-# Environment
 *.env
 *.local
-.config/
+.config/*
 .ssh/
-
-# Services
 .gnupg/
 .aws/
 .azure/
