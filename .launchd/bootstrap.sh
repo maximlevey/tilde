@@ -21,6 +21,8 @@ for subdir in "${LAUNCHD_DIR}"/*/; do
   fi
 
   log "Loading ${plist##*/}..."
+  # Unload first for idempotency (ignore error if not loaded).
+  launchctl bootout "gui/$(id -u)" "${plist}" 2>/dev/null
   launchctl bootstrap "gui/$(id -u)" "${plist}" 2>/dev/null ||
     log_err "Failed to load ${plist##*/}"
 done
