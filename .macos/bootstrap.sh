@@ -16,6 +16,7 @@ defaults write com.apple.dock persistent-apps -array
 defaults write com.apple.dock persistent-others -array
 
 chflags nohidden "${HOME}/Library"
+chflags hidden "${HOME}/.CFUserTextEncoding"
 
 log "Restarting affected services..."
 killall ControlCenter 2>/dev/null || true

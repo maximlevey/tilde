@@ -2,6 +2,7 @@
 # Dotfiles
 #######################################
 
+*
 !.*
 !.*/**
 
@@ -12,8 +13,6 @@
 !src/
 !src/**
 
-!bootstrap.sh
-!clean.sh
 !README.md
 
 !docs/
@@ -31,9 +30,9 @@
 .LSOverride
 
 # Shell
-.bash_history
-.zsh_history
-.fish_history
+.shell/
+.zsh_sessions/
+.CFUserTextEncoding
 
 #######################################
 # Development
@@ -43,8 +42,11 @@
 .claude/*
 !.claude/settings.json
 !.claude/blocklist.json
+.claude.json
+.claude.json.backup
 
 # Cursor
+.cursor/
 .cursorignore
 .cursorindexingignore
 

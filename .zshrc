@@ -10,10 +10,10 @@ export PATH="$HOME/.local/bin:$PATH"
 
 eval "$(/opt/homebrew/bin/brew shellenv)"
 
-export HOMEBREW_BREWFILE="$HOME/.brew/Brewfile"
+export HOMEBREW_BUNDLE_FILE="$HOME/.brew/Brewfile"
 
-export GH_CONFIG_DIR="$HOME/.gitconfig/gh"
-export GIT_CONFIG_GLOBAL="$HOME/.gitconfig/.gitconfig"
+export HISTFILE="$HOME/.shell/.zsh_history"
+export SHELL_SESSIONS_DIR="$HOME/.shell/sessions"
 
 export EDITOR="cursor --wait"
 export VISUAL="cursor --wait"
@@ -59,7 +59,7 @@ function pcp() {
 # COMPLETIONS
 #######################################
 
-autoload -Uz compinit && compinit
+autoload -Uz compinit && compinit -d "$HOME/.shell/.zcompdump"
 
 zstyle ':completion:*' menu select
 zstyle ':completion:*' matcher-list 'm:{a-z}={A-Z}'
