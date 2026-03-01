@@ -130,7 +130,7 @@ log "$(brew --version | head -1)"
 
 log_info "Installing Homebrew packages..."
 
-if retry 3 run_quiet brew bundle --no-lock --file "${HOME}/.brew/Brewfile"; then
+if retry 3 run_quiet brew bundle install --file "${HOME}/.brew/Brewfile"; then
   formulae_count="$(brew list --formula -1 | wc -l | tr -d ' ')"
   cask_count="$(brew list --cask -1 | wc -l | tr -d ' ')"
   log "${formulae_count} formulae, ${cask_count} casks installed."
