@@ -81,14 +81,14 @@ cmd_bootstrap() {
     readonly TMP
     trap 'cleanup; rm -rf "${TMP}"' EXIT
 
-    git clone --depth 1 "${REPO}" "${TMP}" &>/dev/null
+    GIT_TERMINAL_PROMPT=0 git clone --depth 1 --quiet "${REPO}" "${TMP}"
     rsync -ah --exclude '.git' "${TMP}/" "${HOME}/" &>/dev/null
     mv "${TMP}/.git" "${HOME}/.git"
     rm -rf "${TMP}"
     echo "    Dotfiles cloned."
   else
     echo "==> Updating dotfiles..."
-    if git -C "${HOME}" pull --ff-only &>/dev/null; then
+    if GIT_TERMINAL_PROMPT=0 git -C "${HOME}" pull --ff-only --quiet; then
       echo "    Dotfiles updated."
     else
       echo "    Dotfiles pull failed; continuing with local copy."
