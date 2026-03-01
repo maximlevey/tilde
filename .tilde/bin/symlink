@@ -25,4 +25,5 @@ fi
 
 [[ -e "${DEST}" ]] && mv "${DEST}" "${DEST}.bak" >/dev/null
 
+mkdir -p "${DEST:h}"
 ln -sfn "${TARGET}" "${DEST}" >/dev/null

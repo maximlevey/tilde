@@ -3,7 +3,7 @@
 #
 # Configures Raycast on a new device.
 
-# shellcheck source=../lib/zsh/logging.zsh
+# shellcheck source=../.tilde/lib/zsh/logging.zsh
 source "${ZSH_LIB}/logging.zsh"
 
 readonly APP_NAME="Raycast"

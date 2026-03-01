@@ -25,7 +25,7 @@
             <key>HOME</key>
             <string>/Users/maximlevey</string>
             <key>ZSH_LIB</key>
-            <string>/Users/maximlevey/lib/zsh</string>
+            <string>/Users/maximlevey/.tilde/lib/zsh</string>
             <key>PATH</key>
             <string>/opt/homebrew/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin</string>
         </dict>

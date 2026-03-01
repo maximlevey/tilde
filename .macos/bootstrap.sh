@@ -3,7 +3,7 @@
 #
 # Set macOS system preferences.
 
-# shellcheck source=../lib/zsh/logging.zsh
+# shellcheck source=../.tilde/lib/zsh/logging.zsh
 source "${ZSH_LIB}/logging.zsh"
 
 osascript -e "quit app \"System Preferences\"" 2>/dev/null || true
@@ -16,7 +16,6 @@ defaults write com.apple.dock persistent-apps -array
 defaults write com.apple.dock persistent-others -array
 
 chflags nohidden "${HOME}/Library"
-chflags hidden "${HOME}/.CFUserTextEncoding"
 
 log "Restarting affected services..."
 killall ControlCenter 2>/dev/null || true

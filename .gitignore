@@ -8,14 +8,6 @@
 !.*/**
 
 # Non-dotfile directories and files.
-!bin/
-!bin/**
-!lib/
-!lib/**
-!src/
-!src/**
-!docs/
-!docs/**
 !README.md
 
 #######################################

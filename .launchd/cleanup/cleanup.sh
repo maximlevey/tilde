@@ -8,7 +8,7 @@
 #TODO: Add functionality running script on iCloud downloads
 #TODO: Add functionality for offloading older items to iCloud downloads
 
-# shellcheck source=../../lib/zsh/logging.zsh
+# shellcheck source=../../.tilde/lib/zsh/logging.zsh
 source "${ZSH_LIB}/logging.zsh"
 
 # ─── Constants ────────────────────────────────────────────────────────────────

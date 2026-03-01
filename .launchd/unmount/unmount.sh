@@ -11,7 +11,7 @@
 #   --dry-run   Print what would be unmounted without taking action
 #   --force     Retry with force unmount if graceful unmount fails
 
-# shellcheck source=../../lib/zsh/logging.zsh
+# shellcheck source=../../.tilde/lib/zsh/logging.zsh
 source "${ZSH_LIB}/logging.zsh"
 
 readonly SCRIPT_NAME="${0:t}"

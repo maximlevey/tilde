@@ -4,7 +4,7 @@
 # Load LaunchAgents from subdirectories that contain both a
 # .plist and .sh file.
 
-# shellcheck source=../lib/zsh/logging.zsh
+# shellcheck source=../.tilde/lib/zsh/logging.zsh
 source "${ZSH_LIB}/logging.zsh"
 
 readonly LAUNCHD_DIR="${HOME}/.launchd"

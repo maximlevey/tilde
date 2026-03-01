@@ -3,7 +3,7 @@
 #
 # Update, upgrade, and clean up Homebrew packages.
 
-# shellcheck source=../../lib/zsh/logging.zsh
+# shellcheck source=../../.tilde/lib/zsh/logging.zsh
 source "${ZSH_LIB}/logging.zsh"
 
 if ! command -v brew &>/dev/null; then

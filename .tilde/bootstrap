@@ -5,9 +5,9 @@
 # selectively tears down changes.
 #
 # Usage:
-#   Fresh install:  /bin/zsh -c "$(curl -fsSL https://raw.githubusercontent.com/maximlevey/tilde/main/.tilde)"
-#   Bootstrap:      .tilde
-#   Clean:          .tilde clean [--all]
+#   Fresh install:  /bin/zsh -c "$(curl -fsSL https://raw.githubusercontent.com/maximlevey/tilde/main/.tilde/bootstrap)"
+#   Bootstrap:      .tilde/bootstrap
+#   Clean:          .tilde/bootstrap clean [--all]
 
 readonly REPO="https://github.com/maximlevey/tilde.git"
 
@@ -99,10 +99,10 @@ cmd_bootstrap() {
   # Source environment
   #######################################
 
-  export ZSH_LIB="${HOME}/lib/zsh"
-  export PATH="${HOME}/bin:${HOME}/.local/bin:${PATH}"
+  export ZSH_LIB="${HOME}/.tilde/lib/zsh"
+  export PATH="${HOME}/.tilde/bin:${HOME}/.local/bin:${PATH}"
 
-  # shellcheck source=./lib/zsh/logging.zsh
+  # shellcheck source=./.tilde/lib/zsh/logging.zsh
   source "${ZSH_LIB}/logging.zsh"
 
   #######################################
@@ -218,9 +218,9 @@ cmd_bootstrap() {
 # ====================================================================
 
 cmd_clean() {
-  export ZSH_LIB="${HOME}/lib/zsh"
+  export ZSH_LIB="${HOME}/.tilde/lib/zsh"
 
-  # shellcheck source=./lib/zsh/logging.zsh
+  # shellcheck source=./.tilde/lib/zsh/logging.zsh
   source "${ZSH_LIB}/logging.zsh"
 
   # Parse arguments.
@@ -232,7 +232,7 @@ cmd_clean() {
         SKIP_PROMPTS=true
         ;;
       *)
-        usage ".tilde clean [--all]"
+        usage ".tilde/bootstrap clean [--all]"
         ;;
     esac
   done
@@ -431,7 +431,7 @@ case "${1:-}" in
     cmd_clean "$@"
     ;;
   *)
-    echo "Usage: .tilde [bootstrap|clean [--all]]" >&2
+    echo "Usage: .tilde/bootstrap [bootstrap|clean [--all]]" >&2
     exit 9
     ;;
 esac

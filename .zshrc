@@ -2,15 +2,16 @@
 # EXPORTS
 #######################################
 
-export SRC="$HOME/src"
-export ZSH_LIB="$HOME/lib/zsh"
+export SRC="$HOME/.tilde/src"
+export ZSH_LIB="$HOME/.tilde/lib/zsh"
 
-export PATH="$HOME/bin:$PATH"
+export PATH="$HOME/.tilde/bin:$PATH"
 export PATH="$HOME/.local/bin:$PATH"
 
 eval "$(/opt/homebrew/bin/brew shellenv)"
 
 export HOMEBREW_BUNDLE_FILE="$HOME/.brew/Brewfile"
+export GH_CONFIG_DIR="$HOME/.github"
 
 export HISTFILE="$HOME/.shell/.zsh_history"
 export SHELL_SESSIONS_DIR="$HOME/.shell/sessions"
@@ -70,7 +71,7 @@ zstyle ':completion:*' list-colors "${(s.:.)LS_COLORS}"
 #######################################
 
 for lib in "${ZSH_LIB}"/*; do
-  # shellcheck source=./lib/zsh
+  # shellcheck source=./.tilde/lib/zsh
   [ -d "${lib}" ] || source "${lib}"
 done
 
